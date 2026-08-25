@@ -37,10 +37,7 @@ name = "fq"
 path = "src/main.rs"
 
 [dependencies]
-# Pinned to a commit past the last crates.io release (2.8.0), which predates
-# Interval::TwoMinutes/NinetyMinutes/FiveDays and the EDGAR filing size type
-# change this crate already depends on. Switch to a version dependency once
-# a release covering those lands.
+# Pinned past the last crates.io release; switch to a version once one lands.
 finance-query = { git = "https://github.com/Verdenroz/finance-query", rev = "cfba81d3438f31e2a5543cfdc67c5fcd75029cb4", features = ["indicators", "backtesting", "translation"] }
 
 # CLI framework
