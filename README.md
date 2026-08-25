@@ -1,6 +1,6 @@
 # fq - Finance Query CLI
 
-[![CLI Version](https://img.shields.io/github/v/release/Verdenroz/finance-query?filter=finance-query-cli-*&label=version)](https://github.com/Verdenroz/finance-query/releases)
+[![CLI Version](https://img.shields.io/github/v/release/Verdenroz/fq-cli?label=version)](https://github.com/Verdenroz/fq-cli/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Command-line tool for financial data. Supports stocks, ETFs, crypto, currencies, and indices.
@@ -15,17 +15,17 @@ Built on the [finance-query](https://crates.io/crates/finance-query) library.
 
 ```bash
 # Linux/macOS
-curl --proto '=https' --tlsv1.2 -LsSf https://github.com/Verdenroz/finance-query/releases/latest/download/finance-query-cli-installer.sh | sh
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/Verdenroz/fq-cli/releases/latest/download/fq-cli-installer.sh | sh
 
 # Windows
-powershell -c "irm https://github.com/Verdenroz/finance-query/releases/latest/download/finance-query-cli-installer.ps1 | iex"
+powershell -c "irm https://github.com/Verdenroz/fq-cli/releases/latest/download/fq-cli-installer.ps1 | iex"
 ```
 
 **From source:**
 
 ```bash
-git clone https://github.com/Verdenroz/finance-query
-cd finance-query/finance-query-cli
+git clone https://github.com/Verdenroz/fq-cli
+cd fq-cli
 cargo install --path .
 ```
 

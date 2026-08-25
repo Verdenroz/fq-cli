@@ -152,7 +152,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Installation guide for all platforms
 - Screenshots of TUI interfaces
 
-[Unreleased]: https://github.com/Verdenroz/finance-query/compare/cli-v0.3.0...HEAD
-[0.3.0]: https://github.com/Verdenroz/finance-query/compare/cli-v0.2.0...cli-v0.3.0
-[0.2.0]: https://github.com/Verdenroz/finance-query/compare/cli-v0.1.0...cli-v0.2.0
-[0.1.0]: https://github.com/Verdenroz/finance-query/releases/tag/cli-v0.1.0
+[Unreleased]: https://github.com/Verdenroz/fq-cli/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/Verdenroz/fq-cli/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/Verdenroz/fq-cli/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/Verdenroz/fq-cli/releases/tag/v0.1.0

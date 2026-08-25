@@ -1,13 +1,12 @@
 [package]
-name = "finance-query-cli"
+name = "fq-cli"
 version = "0.3.0"
 edition = "2024"
 authors = ["Harvey Tseng <harveytseng2@gmail.com>"]
 description = "Command-line tool for real-time financial data, technical analysis, and market intelligence"
 license = "MIT"
-repository = "https://github.com/Verdenroz/finance-query"
-homepage = "https://github.com/Verdenroz/finance-query"
-documentation = "https://docs.rs/finance-query-cli"
+repository = "https://github.com/Verdenroz/fq-cli"
+homepage = "https://github.com/Verdenroz/fq-cli"
 readme = "README.md"
 keywords = ["finance", "yahoo", "stocks", "cli", "market-data"]
 categories = ["command-line-utilities", "finance"]
@@ -29,7 +28,7 @@ default-target = "x86_64-unknown-linux-gnu"
 
 # Binary installation name
 [package.metadata.binstall]
-pkg-url = "{ repo }/releases/download/cli-v{ version }/{ name }-{ target }.tar.gz"
+pkg-url = "{ repo }/releases/download/v{ version }/{ name }-{ target }.tar.gz"
 bin-dir = "{ bin }{ binary-ext }"
 pkg-fmt = "tgz"
 
@@ -38,8 +37,11 @@ name = "fq"
 path = "src/main.rs"
 
 [dependencies]
-# Core library
-finance-query = { version = "2.0", path = "..", features = ["indicators", "backtesting", "translation"] }
+# Pinned to a commit past the last crates.io release (2.8.0), which predates
+# Interval::TwoMinutes/NinetyMinutes/FiveDays and the EDGAR filing size type
+# change this crate already depends on. Switch to a version dependency once
+# a release covering those lands.
+finance-query = { git = "https://github.com/Verdenroz/finance-query", rev = "cfba81d3438f31e2a5543cfdc67c5fcd75029cb4", features = ["indicators", "backtesting", "translation"] }
 
 # CLI framework
 clap = { version = "4.6", features = ["derive", "cargo", "env"] }
@@ -95,3 +97,8 @@ translation-offline = ["finance-query/translation-offline"]
 assert_cmd = "2.2"
 predicates = "3.1"
 tempfile = "3.27"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"

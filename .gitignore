@@ -1,0 +1,32 @@
+/CLAUDE.md
+.claude/
+
+# Rust build artifacts
+/target/
+**/*.rs.bk
+*.pdb
+
+# Local alerts/portfolio database
+*.db
+*.db-shm
+*.db-wal
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Environment variables
+*.env
+!*.env.template
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
