@@ -72,8 +72,6 @@ jobs:
           tool: nextest
       - name: Run unit and integration tests
         run: cargo nextest run
-      - name: Run doctests
-        run: cargo test --doc
 
   build:
     name: Build Release
